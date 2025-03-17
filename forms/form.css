@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+
+:root {
+    --primary-bg-color: #051928;
+    --secondary-bg-color: #0A2D4D;
+    --font-color: white;
+    --font-family: 'Montserrat', sans-serif;
+    --form-border-color: rgba(255, 255, 255, 0.3);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    align-items: center;
+    background: rgba(255, 255, 255, 0.5);
+    color: var(--font-color);
+    display: grid;
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 400;
+    height: 100vh;
+    justify-items: center;
+    width: 100vw;
+    /* ... previous code remains the same ... */
+    background-image: url('background.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(10px);
+
+    /* Add -webkit- prefix for Safari and iOS support */
+}
+
+.signup-container {
+    display: grid;
+    grid-template-areas: "left right";
+    max-width: 900px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Left Container */
+/* Left Container */
+.left-container {
+    background: #263d4d;
+    overflow: hidden;
+    padding: 20px 0;
+    position: relative;
+    text-align: center;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+/* Ensure H1 stays at the top */
+.left-container h1 {
+    color: var(--font-color);
+    font-size: 24px;
+    padding-left: 95px;
+    margin: 0;
+    padding: 15px 0 0 10px; /* Add padding to align with right container h1 */
+    align-self: flex-start;
+}
+
+/* Center image properly */
+.left-container .puppy {
+    display: flex;
+    flex: 1; /* Take up available space */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.left-container img {
+    width: 80%;
+    max-width: 200px;
+    height: 40%;
+    margin: 0;
+}
+
+
+.left-container h1 i {
+    background: var(--primary-bg-color);
+    border-radius: 50%;
+    color: var(--secondary-bg-color);
+    font-size: 24px;
+    margin-right: 5px;
+    padding: 10px;
+}
+
+
+.left-container .puppy::before {
+    background: var(--secondary-bg-color);
+    content: "";
+    height: 100%;
+    left: 0;
+    opacity: 0.4;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+
+
+/* Right Container */
+.right-container {
+    background: linear-gradient(135deg, #263d4d, #1b2b35);
+    display: grid;
+    grid-template-areas: "." ".";
+    width: 500px;
+    padding: 40px;
+    border-radius: 0 12px 12px 0;
+}
+
+.right-container h1 {
+    color: var(--font-color);
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.right-container p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.right-container .set {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.right-container input {
+    border: 1px solid var(--form-border-color);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    height: 38px;
+    line-height: 38px;
+    padding-left: 10px;
+    width: 176px;
+    color: var(--font-color);
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.right-container input:focus {
+    border-color: #8ab4d0;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.right-container label {
+    color: var(--font-color);
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.right-container .pets-photo {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
+.right-container .pets-photo button {
+    border: none;
+    border-radius: 50%;
+    height: 38px;
+    outline: none;
+    width: 38px;
+    background: var(--primary-bg-color);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.right-container .pets-photo button:hover {
+    background: #4a6a7f;
+}
+
+.right-container .pets-photo button i {
+    color: var(--font-color);
+    font-size: 16px;
+}
+
+/* Weight Section */
+.pets-weight .radio-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+footer {
+    align-items: center;
+    background: transparent;
+    display: grid;
+    padding: 5px 40px;
+    margin-top: 20px;
+}
+
+footer button {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    height: 38px;
+    line-height: 38px;
+    width: 100px;
+    border-radius: 19px;
+    font-family: var(--font-family);
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+    color: var(--font-color);
+    background: transparent;
+}
+
+footer #back:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+footer #next {
+    background: var(--primary-bg-color);
+    border: 1px solid transparent;
+    color: white;
+}
+
+footer #next:hover {
+    background: #4a6a7f;
+}
+
+/* Radio Buttons */
+.radio-container {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--form-border-color);
+    border-radius: 4px;
+    display: inline-block;
+    padding: 5px;
+    transition: 0.3s ease;
+}
+
+.radio-container label {
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    margin: 0;
+    padding: 0 10px;
+    text-align: center;
+    transition: 0.3s all ease-in-out;
+    width: auto;
+    color: white;
+    cursor: pointer;
+}
+
+.radio-container input[type="radio"] {
+    display: none;
+}
+
+.radio-container input[type="radio"]:checked + label {
+    background: var(--primary-bg-color);
+    border: 1px solid var(--form-border-color);
+    color: white;
+}
+
+
+/* Room Type Styling */
+.patients-room {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.patients-room .radio-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 10px;
+    border: 1px solid var(--form-border-color);
+}
+
+.patients-room .radio-container label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.patients-room .radio-container input[type="radio"] {
+    display: none;
+}
+
+.patients-room .radio-container input[type="radio"]:checked + label {
+    background: var(--primary-bg-color);
+    color: white;
+    font-weight: bold;
+}

@@ -1,0 +1,136 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    background-color:linear-gradient(to right, #051928, #0A2D4D);
+    color: #333;
+    height: 100vh;
+    overflow: hidden;
+    width: 100vw; /* Full width */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    background: #1e1e2d;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+}
+
+.sidebar .logo {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.sidebar .menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar .menu li {
+    padding: 12px;
+    margin: 10px 0;
+    transition: 0.3s;
+}
+
+.sidebar .menu li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .menu li:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+.user-profile {
+    margin-top: 20px;
+    text-align: center;
+    color: white;
+}
+
+.user-profile img {
+    width: 80px;
+    border-radius: 50%;
+}
+
+.user-profile p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 260px;
+    padding: 20px;
+    flex-grow: 1;
+    width: calc(100vw - 260px); /* Full width after sidebar */
+    overflow-y: auto;
+}
+
+/* Header */
+header {
+    background: #1e1e2d;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Stats Section */
+.stats {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.stat-card {
+    flex: 1;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.stat-card.red { background: #ff6b6b; }
+.stat-card.blue { background: #1e90ff; }
+.stat-card.yellow { background: #ffb400; }
+.stat-card.green { background: #32cd32; }
+
+/* Charts */
+.charts {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Fix Doughnut Chart Overflow */
+.chart-container {
+    flex: 1;
+    background:white;
+    color: black;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px; /* Fixed height */
+    min-width: 350px; /* Ensures visibility */
+}
+
+canvas {
+    max-width: 100% !important;
+    max-height: 100% !important;
+}

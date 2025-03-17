@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Client Form</title>
+    <link rel="stylesheet" href="form.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="signup-container">
+        <!-- Left Container -->
+        <div class="left-container">
+            <h1>
+                <i class="fas fa-hospital"></i> CREATE A CLIENT
+            </h1>
+            <div class="puppy">
+                <img src="image copy 2.png" alt="Hospital Building">
+
+            </div>
+        </div>
+
+        <!-- Right Container -->
+        <div class="right-container">
+            <header>
+                <h1>Your Health, Our Priority!</h1>
+                <p>Please provide the hospital's details to get started.</p>
+            </header>
+
+            <!-- Hospital Name and Photo -->
+            <div class="set">
+                <div class="pets-name">
+                    <label for="pets-name">Hospital Name</label>
+                    <input id="pets-name" type="text" placeholder="Enter hospital name">
+                </div>
+                <div class="pets-photo">
+                    <button id="pets-upload">
+                        <i class="fas fa-camera-retro"></i>
+                    </button>
+                    <label for="pets-upload">Upload Hospital Logo</label>
+                </div>
+            </div>
+
+            <!-- Hospital ID and Established Date -->
+            <div class="set">
+                <div class="pets-breed">
+                    <label for="pets-breed">Hospital ID</label>
+                    <input id="pets-breed" type="text" placeholder="Enter hospital ID">
+                </div>
+                <div class="pets-birthday">
+                    <label for="pets-birthday">Established Date</label>
+                    <input id="pets-birthday" type="text" placeholder="MM/DD/YYYY">
+                </div>
+            </div>
+
+            <!-- Hospital Type and Accreditation -->
+            <div class="set">
+                <div class="pets-gender">
+                    <label for="pet-gender-female">Hospital Type</label>
+                    <div class="radio-container">
+                        <input id="pet-gender-female" name="pet-gender" type="radio" value="general" checked>
+                        <label for="pet-gender-female">General</label>
+
+                        <input id="pet-gender-male" name="pet-gender" type="radio" value="specialized">
+                        <label for="pet-gender-male">Specialized</label>
+                    </div>
+                </div>
+
+                <div class="pets-spayed-neutered">
+                    <label for="pet-spayed">Accreditation</label>
+                    <div class="radio-container">
+                        <input id="pet-spayed" name="spayed-neutered" type="radio" value="yes" checked>
+                        <label for="pet-spayed">Yes</label>
+
+                        <input id="pet-neutered" name="spayed-neutered" type="radio" value="no">
+                        <label for="pet-neutered">No</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bed Capacity -->
+            <div class="pets-weight">
+                <label for="pet-weight-0-25">Bed Capacity</label>
+                <div class="radio-container">
+                    <input id="pet-weight-0-25" name="pet-weight" type="radio" value="0-50" checked>
+                    <label for="pet-weight-0-25">0-50</label>
+
+                    <input id="pet-weight-25-50" name="pet-weight" type="radio" value="51-100">
+                    <label for="pet-weight-25-50">51-100</label>
+
+                    <input id="pet-weight-50-100" name="pet-weight" type="radio" value="101-200">
+                    <label for="pet-weight-50-100">101-200</label>
+
+                    <input id="pet-weight-100-plus" name="pet-weight" type="radio" value="200+">
+                    <label for="pet-weight-100-plus">200+</label>
+                </div>
+            </div>
+
+            <!-- Footer with Buttons -->
+            <footer>
+                <div class="set">
+                    <button id="back">Back</button>
+                    <button id="next">Next</button>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

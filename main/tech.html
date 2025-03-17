@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Info</title>
+    <link rel="stylesheet" href="tech.css">
+</head>
+<body>
+
+<header>
+    <nav class="custom-navbar">
+        <div class="container">
+            <div class="navbar-left">
+                <img src="..\assets\logo.png" alt="Logo" width="50" height="50">
+                <a class="navbar-brand" href="home.html">AI X-ray Diagnosis Portal</a>
+            </div>
+            <div class="navbar-right">
+                <a class="btn-secondary" href="about.html">About</a>
+                <a class="btn-secondary" href="tech.html">Tech Info</a>
+                <a class="btn-secondary" href="contact.html">Contact</a>
+                <a class="btn-primary" href="login.html">Login</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <!-- Technology Overview -->
+    <section class="tech-container">
+        <div class="tech-content">
+            <div class="tech-text">
+                <h2>Technology Stack</h2>
+                <p>Our AI X-ray diagnosis system integrates cutting-edge Artificial Intelligence, Deep Learning, and Cloud Computing to deliver precise medical imaging analysis.
+                By leveraging advanced Convolutional Neural Networks (CNNs), Recurrent Neural Networks (RNNs), and LSTMs, our system ensures high accuracy in detecting abnormalities from X-ray images.
+                Our backend is powered by Flask and FastAPI for efficient API handling, while a scalable cloud infrastructure on AWS ensures real-time processing and secure data storage.
+                We use optimized image processing with OpenCV and TensorFlow to enhance medical images before analysis, improving overall diagnostic accuracy.</p>
+            </div>
+            <div class="tech-image">
+                <img src="..\assets\tech_image.jpeg" alt="Technology Stack">
+            </div>
+        </div>
+    </section>    
+
+    <!-- AI Model Interactive Timeline -->
+    <section class="timeline">
+        <h3>🔍 AI & Deep Learning Evolution</h3>
+        <div class="timeline-container">
+            <div class="timeline-step">
+                <span class="timeline-dot"></span>
+                <h4>📌 Step 1: CNN Model Training</h4>
+                <p>We train convolutional neural networks (CNNs) on medical X-ray datasets.</p>
+            </div>
+            <div class="timeline-step">
+                <span class="timeline-dot"></span>
+                <h4>📌 Step 2: Feature Extraction with RNN</h4>
+                <p>Using RNN for feature extraction, allowing AI to understand medical patterns.</p>
+            </div>
+            <div class="timeline-step">
+                <span class="timeline-dot"></span>
+                <h4>📌 Step 3: LSTM for Image Captioning</h4>
+                <p>AI generates human-like medical reports using LSTM for automated diagnosis interpretation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collapsible Backend & API Details -->
+    <section class="collapsible-section">
+        <h3 class="collapsible-header">🖥️ Backend & API <span>▼</span></h3>
+        <div class="collapsible-content">
+            <p>Our backend ensures secure and seamless AI-powered medical predictions.</p>
+            <ul>
+                <li>📌 <b>Framework:</b> Flask (Python) & FastAPI</li>
+                <li>📌 <b>Security:</b> AES-256 encryption, JWT authentication</li>
+                <li>📌 <b>Database:</b> PostgreSQL & MongoDB</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="collapsible-section">
+        <h3 class="collapsible-header">🎨 Frontend & UI <span>▼</span></h3>
+        <div class="collapsible-content">
+            <p>Our frontend ensures an interactive and responsive experience.</p>
+            <ul>
+                <li>📌 <b>Framework:</b> React.js & Next.js</li>
+                <li>📌 <b>Styling:</b> Tailwind CSS</li>
+                <li>📌 <b>Authentication:</b> Google OAuth</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button onclick="scrollToTop()" id="scrollBtn" title="Go to Top">↑</button>
+
+</main>
+
+<footer>
+    <p>© 2025 AI X-ray Diagnosis Portal | All Rights Reserved.</p>
+    <p>Contact: support@xraydiagnosis.com</p>
+</footer>
+
+<script>
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    document.querySelectorAll('.collapsible-header').forEach(header => {
+        header.addEventListener('click', () => {
+            const content = header.nextElementSibling;
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+</script>
+
+</body>
+</html>

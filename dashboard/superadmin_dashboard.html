@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Admin Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <h2 class="logo">Super Admin</h2>
+            <ul class="menu">
+                <li><a href="#"><span>🏠</span> Dashboard</a></li>
+                <li><a href="#" onclick="showProfile()">👤 My Profile</a></li>
+
+                <li><a href="create-hospital.html"><span>🏥</span> Create Hospital</a></li>
+                <li><a href="create-doctor.html"><span>🩺</span> Create Doctor</a></li>
+                <li><a href="create-admin.html"><span>⚙️</span> Create Admin</a></li>
+                <li><a href="reports.html"><span>📊</span> Reports</a></li>
+
+                <li><a href="#"><span>🚪</span> Logout</a></li>
+            </ul>
+            <div class="user-profile">
+                <img src="admin.jpg" alt="Admin">
+                <p>Super Admin</p>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <h1>Welcome, Super Admin 👋</h1>
+                <p>Manage hospitals and users efficiently.</p>
+            </header>
+
+            <!-- Stats Section -->
+            <div class="stats">
+                <div class="stat-card red">
+                    <h3>Hospitals</h3>
+                    <p>50 <span>+12% since last month</span></p>
+                </div>
+                <div class="stat-card blue">
+                    <h3>Doctors</h3>
+                    <p>320 <span>+8.5% since last month</span></p>
+                </div>
+                <div class="stat-card yellow">
+                    <h3>Admins</h3>
+                    <p>65 <span>+5.1% since last month</span></p>
+                </div>
+                <div class="stat-card green">
+                    <h3>Patients</h3>
+                    <p>1200 <span>+22% since last month</span></p>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts">
+                <div class="chart-container">
+                    <canvas id="hospitalChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="userChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Hospital Growth Chart
+        const ctx1 = document.getElementById('hospitalChart').getContext('2d');
+        new Chart(ctx1, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'New Hospitals',
+                    data: [10, 15, 20, 25, 30, 40],
+                    backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: { responsive: true }
+        });
+
+        // User Distribution Chart (Doughnut)
+        const ctx2 = document.getElementById('userChart').getContext('2d');
+        new Chart(ctx2, {
+            type: 'doughnut',
+            data: {
+                labels: ['Doctors', 'Admins', 'Patients'],
+                datasets: [{
+                    data: [35, 10, 55],
+                    backgroundColor: ['#1e90ff', '#ffb400', '#32cd32']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false, // Fixes doughnut overflow issue
+                layout: {
+                    padding: 10
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

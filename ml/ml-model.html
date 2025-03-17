@@ -1,0 +1,62 @@
+<!-- image-upload.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Upload</title>
+    <link rel="stylesheet" href="ml-model.css" />
+  </head>
+
+  <body>
+    <main>
+      <div class="dashboard-container">
+        <div class="dashboard-card">
+          <h2 class="dashboard-title">Image Upload</h2>
+
+          <!-- Image Upload Section -->
+          <div class="upload-section">
+            <h3>Upload the Patient's X-Ray</h3>
+            <input
+              type="file"
+              id="imageUpload"
+              accept="image/*"
+              class="file-input"
+            />
+            <div id="imagePreview" class="image-preview"></div>
+
+            <!-- Back to Dashboard Button -->
+            <button
+              class="btn-primary"
+              onclick="location.href='home.html'"
+              style="margin-top: 15px"
+            >
+              Back to Home
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      // Image Preview Functionality
+      document
+        .getElementById("imageUpload")
+        .addEventListener("change", function (event) {
+          const preview = document.getElementById("imagePreview");
+          preview.innerHTML = "";
+
+          const file = event.target.files[0];
+          if (file && file.type.startsWith("image/")) {
+            const img = document.createElement("img");
+            img.src = URL.createObjectURL(file);
+            img.alt = "Uploaded Image";
+            img.classList.add("preview-image");
+            preview.appendChild(img);
+          } else {
+            preview.innerHTML = "Please upload a valid image file.";
+          }
+        });
+    </script>
+  </body>
+</html>

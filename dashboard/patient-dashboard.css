@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: #263d4d;
+    padding: 20px;
+}
+
+/* Full-Screen Dashboard */
+.container {
+    background: #fff;
+    padding: 40px;
+    width: 100%;
+    max-width: 1200px; 
+    height: 90vh;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    overflow-y: auto; 
+}
+
+/* Heading */
+h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+/* Patient Info */
+.patient-info {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+    font-size: 18px;
+}
+
+.patient-info p {
+    margin: 8px 0;
+}
+
+/* Report Section */
+.report-section {
+    margin-top: 25px;
+}
+
+h3 {
+    color: #007bff;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+/* Image Display Section */
+.report-images {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Allows responsiveness on smaller screens */
+    margin-bottom: 20px;
+}
+
+.image-box {
+    text-align: center;
+}
+
+.image-box h4 {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.image-box img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.image-box img:hover {
+    transform: scale(1.05);
+}
+
+/* Captioning */
+.caption {
+    font-size: 18px;
+    font-style: italic;
+    color: #444;
+    margin-top: 15px;
+}

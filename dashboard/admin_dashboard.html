@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <h2 class="logo">Admin Panel</h2>
+            <ul class="menu">
+                <li><a href="#"><span>🏠</span> Dashboard</a></li>
+                <li><a href="#" onclick="showProfile()">👤 My Profile</a></li>
+                <li><a href="xray-captioning.html"><span>📄</span> X-ray Captioning</a></li>
+                <li><a href="create-patient.html"><span>🩺</span> Create Patient</a></li>
+                <li><a href="#"><span>🚪</span> Logout</a></li>
+            </ul>
+            <div class="user-profile">
+                <img src="admin.jpg" alt="Admin">
+                <p>Admin Name</p>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <h1>Welcome, Admin 👨‍💼</h1>
+                <p>Manage patients and reports efficiently.</p>
+            </header>
+
+            <!-- Stats Section -->
+            <div class="stats">
+                <div class="stat-card red">
+                    <h3>Patients Managed</h3>
+                    <p>250 <span>+5% since last month</span></p>
+                </div>
+                <div class="stat-card blue">
+                    <h3>Reports Generated</h3>
+                    <p>180 <span>+12% since last month</span></p>
+                </div>
+                <div class="stat-card yellow">
+                    <h3>Active Cases</h3>
+                    <p>40 <span>-3% since last month</span></p>
+                </div>
+                <div class="stat-card green">
+                    <h3>Resolved Cases</h3>
+                    <p>92% Resolved</p>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts">
+                <div class="chart-container">
+                    <canvas id="patientChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="caseChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+
+</body>
+</html>

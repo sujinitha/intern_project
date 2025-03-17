@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard</title>
+    <link rel="stylesheet" href="doctor_dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <h2 class="logo">Doctor Panel</h2>
+            <ul class="menu">
+                <li><a href="#"><span>🏠</span> Dashboard</a></li>
+                <li><a href="#" onclick="showProfile()">👤 My Profile</a></li>
+                <li><a href="xray-captioning.html"><span>⬆️</span> X-ray Captioning</a></li>
+                <li><a href="view-reports.html"><span>📄</span> View Reports</a></li>
+                <li><a href="create-patient.html"><span>🩺</span> Create Patient</a></li>
+                <li><a href="create-admin.html"><span>⚙️</span> Create Admin</a></li>
+                <li><a href="#"><span>🚪</span> Logout</a></li>
+            </ul>
+            <div class="user-profile">
+                <img src="doctor.jpg" alt="Doctor">
+                <p>Dr. John Doe</p>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <h1>Welcome, Doctor 👨‍⚕️</h1>
+                <p>Manage your patients efficiently.</p>
+            </header>
+
+            <!-- Stats Section -->
+            <div class="stats">
+                <div class="stat-card red">
+                    <h3>Patients</h3>
+                    <p>150 <span>+10% since last month</span></p>
+                </div>
+                <div class="stat-card blue">
+                    <h3>Reports Reviewed</h3>
+                    <p>75 <span>+5% since last month</span></p>
+                </div>
+                <div class="stat-card yellow">
+                    <h3>Pending Cases</h3>
+                    <p>20 <span>-3% since last month</span></p>
+                </div>
+                <div class="stat-card green">
+                    <h3>Successful Diagnoses</h3>
+                    <p>95% Accuracy</p>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts">
+                <div class="chart-container">
+                    <canvas id="patientChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="diagnosisChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+
+</body>
+</html>

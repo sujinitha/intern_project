@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Hospital</title>
+    <link rel="stylesheet" href="form.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+</head>
+<body>
+
+    <div class="signup-container">
+        <!-- Left Container -->
+        <div class="left-container">
+            <h1><i class="fas fa-hospital"></i> CREATE HOSPITAL</h1>
+            <div class="hospital-image">
+                <img src="hospital.png" alt="Hospital">
+            </div>
+        </div>
+
+        <!-- Right Container -->
+        <div class="right-container">
+            <header>
+                <h1>Register a New Hospital</h1>
+                <p>Provide the details below</p>
+            </header>
+
+            <form id="hospitalForm">
+                <!-- Hospital Name & Logo -->
+                <div class="set">
+                    <div class="input-field">
+                        <label>Hospital Name</label>
+                        <input type="text" id="hospitalName" placeholder="Enter Hospital Name" required>
+                    </div>
+                    <div class="input-field">
+                        <label>Upload Logo</label>
+                        <input type="file" id="hospitalLogo">
+                    </div>
+                </div>
+
+                <!-- Hospital ID & Established Date -->
+                <div class="set">
+                    <div class="input-field">
+                        <label>Hospital ID</label>
+                        <input type="text" id="hospitalID" placeholder="Enter Hospital ID" required>
+                    </div>
+                    <div class="input-field">
+                        <label>Established Date</label>
+                        <input type="date" id="establishedDate" required>
+                    </div>
+                </div>
+
+                <!-- Type & Accreditation -->
+                <div class="set">
+                    <div class="input-field">
+                        <label>Hospital Type</label>
+                        <select id="hospitalType">
+                            <option value="General">General</option>
+                            <option value="Specialized">Specialized</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label>Accreditation</label>
+                        <select id="accreditation">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Bed Capacity -->
+                <div class="input-field">
+                    <label>Bed Capacity</label>
+                    <select id="bedCapacity">
+                        <option value="0-50">0-50</option>
+                        <option value="51-100">51-100</option>
+                        <option value="101-200">101-200</option>
+                        <option value="200+">200+</option>
+                    </select>
+                </div>
+
+                <!-- Buttons -->
+                <footer>
+                    <button type="button" id="back">Back</button>
+                    <button type="submit" id="submitHospital">Create</button>
+                </footer>
+            </form>
+        </div>
+    </div>
+
+    <script src="hospital.js"></script>
+
+</body>
+</html>

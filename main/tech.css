@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+/* Navbar */
+.custom-navbar {
+    background: linear-gradient(to right, #051928, #0A2D4D);
+    padding: 15px 0;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand {
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 12px;
+}
+
+.navbar-brand:hover {
+    color: #e1eaf5;
+}
+
+/* Navbar Buttons */
+.navbar-right a {
+    margin: 0 12px;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #0084ff;
+}
+
+.btn-primary {
+    background-color: #0084ff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #006ad1;
+}
+
+/* Technology Overview */
+.tech-container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 60px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tech-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tech-text {
+    width: 55%;
+    text-align: left;
+}
+
+.tech-text h2 {
+    font-size: 32px;
+    color: #051928;
+    margin-bottom: 35px;
+    font-weight: bold;
+}
+
+.tech-text p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.tech-image {
+    width: 40%;
+}
+
+.tech-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Timeline - AI & Deep Learning */
+.timeline {
+    text-align: center;
+    margin: 40px auto;
+    width: 95%;
+    max-width: 1100px;
+}
+
+.timeline h3{
+    font-size: 30px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.timeline-step {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+    width: 90%;
+    max-width: 800px;
+    text-align: left;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    border-left: 5px solid #0084ff;
+}
+
+.timeline-step:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+.timeline-dot {
+    width: 12px;
+    height: 12px;
+    background-color: #0084ff;
+    border-radius: 50%;
+    position: absolute;
+    left: -8px;
+    top: 22px;
+}
+
+.timeline-step h4 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.timeline-step p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Collapsible Sections */
+.collapsible-section {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.collapsible-header {
+    background: #0084ff;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.collapsible-header:hover {
+    background: #0056b3;
+}
+
+.collapsible-content {
+    background: white;
+    padding: 18px;
+    display: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+    margin-top: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.collapsible-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.collapsible-content ul li {
+    font-size: 16px;
+    padding: 8px;
+    background: #f9f9f9;
+    border-left: 5px solid #0084ff;
+    margin: 6px 0;
+    border-radius: 5px;
+}
+
+/* Scroll to Top Button */
+#scrollBtn {
+    display: block;
+    margin: 80px auto;
+    background: #0084ff;
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#scrollBtn:hover {
+    background: #0056b3;
+}
+
+/* Footer */
+footer {
+    color: black;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+

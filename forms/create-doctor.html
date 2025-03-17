@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Registration Form</title>
+    <link rel="stylesheet" href="form.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="signup-container">
+        <!-- Left Container -->
+        <div class="left-container">
+            <h1>
+                <i class="fas fa-user-md"></i> CREATE DOCTOR
+            </h1>
+            <div class="puppy">
+                <img src="medical-team.png" alt="Doctor-logo">
+            </div>
+        </div>
+
+        <!-- Right Container -->
+        <div class="right-container">
+            <header>
+                <h1>Dedicated to Saving Lives!</h1>
+                <p>Please provide the doctor's details to get started.</p>
+            </header>
+            
+            <!-- Doctor Name and Photo -->
+            <div class="set">
+                <div class="pets-name">
+                    <label for="pets-name">Doctor Name</label>
+                    <input id="pets-name" type="text" placeholder="Enter doctor name">
+                </div>
+                <div class="pets-photo">
+                    <button id="pets-upload">
+                        <i class="fas fa-camera-retro"></i>
+                    </button>
+                    <label for="pets-upload">Upload Doctor Photo</label>
+                </div>
+            </div>
+
+            <!-- Doctor ID and Date of Joining -->
+            <div class="set">
+                <div class="pets-breed">
+                    <label for="pets-breed">Doctor ID</label>
+                    <input id="pets-breed" type="text" placeholder="Enter doctor ID">
+                </div>
+                <div class="pets-birthday">
+                    <label for="pets-birthday">Date of Joining</label>
+                    <input id="pets-birthday" type="date" placeholder="MM/DD/YYYY">
+                </div>
+            </div>
+
+            <!-- Gender and Specialization -->
+            <div class="set">
+                <div class="pets-gender">
+                    <label for="pet-gender-female">Gender</label>
+                    <div class="radio-container">
+                        <input id="pet-gender-female" name="pet-gender" type="radio" value="male" checked>
+                        <label for="pet-gender-female">Male</label>
+
+                        <input id="pet-gender-male" name="pet-gender" type="radio" value="female">
+                        <label for="pet-gender-male">Female</label>
+                    </div>
+                </div>
+
+                <div class="pets-spayed-neutered">
+                    <label for="pet-spayed">Specialization</label>
+                    <div class="radio-container">
+                        <input id="pet-spayed" name="spayed-neutered" type="radio" value="general" checked>
+                        <label for="pet-spayed">General Physician</label>
+
+                        <input id="pet-neutered" name="spayed-neutered" type="radio" value="specialist">
+                        <label for="pet-neutered">Specialist</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience Level -->
+            <div class="pets-weight">
+                <label for="pet-weight-0-25">Years of Experience</label>
+                <div class="radio-container">
+                    <input id="pet-weight-0-25" name="pet-weight" type="radio" value="0-5" checked>
+                    <label for="pet-weight-0-25">0-5 Years</label>
+
+                    <input id="pet-weight-25-50" name="pet-weight" type="radio" value="6-10">
+                    <label for="pet-weight-25-50">6-10 Years</label>
+
+                    <input id="pet-weight-50-100" name="pet-weight" type="radio" value="11-20">
+                    <label for="pet-weight-50-100">11-20 Years</label>
+
+                    <input id="pet-weight-100-plus" name="pet-weight" type="radio" value="20+">
+                    <label for="pet-weight-100-plus">20+ Years</label>
+                </div>
+            </div>
+
+            <!-- Footer with Buttons -->
+            <footer>
+                <div class="set">
+                    <button id="back">Back</button>
+                    <button id="next">Next</button>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

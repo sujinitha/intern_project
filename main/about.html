@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - AI X-ray Diagnosis Portal</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+<header>
+    <nav class="custom-navbar">
+        <div class="container">
+            <div class="navbar-left">
+                <img src="..\assets\logo.png" alt="Logo" width="50" height="50">
+                <a class="navbar-brand" href="home.html">AI X-ray Diagnosis Portal</a>
+            </div>
+            <div class="navbar-right">
+                <a class="btn-secondary" href="about.html">About</a>
+                <a class="btn-secondary" href="tech.html">Tech Info</a>
+                <a class="btn-secondary" href="contact.html">Contact</a>
+                <a class="btn-primary" href="login.html">Login</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <!-- Our Story Section -->
+    <section class="our-story">
+        <div class="story-content">
+            <h2>Our Story</h2>
+            <p>Our AI-powered X-ray diagnosis system was developed to revolutionize medical imaging by bridging the gap between traditional radiology and cutting-edge artificial intelligence. In today’s fast-paced healthcare environment, delayed or inaccurate diagnoses can significantly impact patient outcomes. By leveraging deep learning algorithms, real-time analysis, and AI-driven pattern recognition, our system provides faster, highly precise, and automated X-ray interpretations.
+                With the power of AI, radiologists and healthcare professionals can now detect abnormalities with enhanced accuracy, reducing diagnostic errors and speeding up treatment planning. Our ultimate goal is to empower hospitals, clinics, and researchers with an intelligent, secure, and scalable diagnostic platform that integrates seamlessly into existing medical workflows.  
+                By harnessing advanced machine learning models, our system ensures that every patient receives timely, accurate, and efficient care, ultimately reshaping the future of medical imaging.</p>
+        </div>
+        <div class="story-image">
+            <img src="..\assets\story ai.png" alt="Our Story">
+        </div>
+    </section>
+
+    <!-- AI Workflow Section -->
+    <section class="workflow">
+        <h2>How Our AI Works</h2>
+        <div class="workflow-steps">
+            <div class="step">
+                <img src="..\assets\upload.png" alt="Upload">
+                <h3>Upload X-ray</h3>
+                <p>Doctors and radiologists can securely upload chest X-rays for AI analysis.</p>
+            </div>
+            <div class="step">
+                <img src="..\assets\aianalysis.png" alt="AI Analysis">
+                <h3>AI Diagnosis</h3>
+                <p>Our AI model processes the X-ray, detects abnormalities, and generates insights.</p>
+            </div>
+            <div class="step">
+                <img src="..\assets\generatereport.png" alt="Report">
+                <h3>Generate Report</h3>
+                <p>A comprehensive report is created with AI-generated captions, heatmaps, and suggested diagnoses.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- Impact Statistics -->
+<section class="impact">
+    <h2>Impact & Achievements</h2>
+    <div class="stats-box">
+        <div class="stat">
+            <h3>🚀 Speed Improvement</h3>
+            <p>Compared to manual X-ray analysis</p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 85%;">85%</div>
+            </div>
+        </div>
+        <div class="stat">
+            <h3>✅ AI Accuracy</h3>
+            <p>AI-based disease detection</p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 98%;">98%</div>
+            </div>
+        </div>
+        <div class="stat">
+            <h3>📊 Scans Processed</h3>
+            <p>Real-time AI analysis of X-ray scans</p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 70%;">7,000+</div>
+            </div>
+        </div>
+        <div class="stat">
+            <h3>🏥 Hospitals Integrated</h3>
+            <p>Using our AI-powered system</p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 20%;">20+</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+   <!-- Future Vision -->
+<section class="future-vision">
+    <h2>Future Vision</h2>
+    <p>We are continuously evolving to enhance AI-powered diagnostics. Our future goals include:</p>
+    <ul class="future-vision-list">
+        <li>🧠 <strong>Expanding AI analysis</strong>to MRI and CT scans</li>
+        <li>📊 <strong>Integrating predictive analytics</strong>for early-stage disease detection</li>
+        <li>👨‍⚕️ <strong>Enhancing AI-assisted</strong>doctor consultations</li>
+    </ul>
+</section>
+
+    <!-- FAQ Section -->
+<section class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+        <h3 onclick="toggleFAQ(this)">
+            ✔️ Is this AI 100% accurate?
+            <span class="faq-toggle">+</span>
+        </h3>
+        <p class="faq-content">
+            Our AI assists radiologists with high precision, but human expertise is still required for final diagnosis.
+        </p>
+    </div>
+
+    <div class="faq-item">
+        <h3 onclick="toggleFAQ(this)">
+            🏥 What diseases can this system detect?
+            <span class="faq-toggle">+</span>
+        </h3>
+        <p class="faq-content">
+            The AI model detects pneumonia, tuberculosis, fibrosis, nodules, and other lung conditions.
+        </p>
+    </div>
+
+    <div class="faq-item">
+        <h3 onclick="toggleFAQ(this)">
+            🔒 How secure is patient data?
+            <span class="faq-toggle">+</span>
+        </h3>
+        <p class="faq-content">
+            All data is end-to-end encrypted (AES-256) and securely stored in compliance with medical regulations.
+        </p>
+    </div>
+</section>
+ 
+<div class="scroll-container">
+    <button onclick="scrollToTop()" id="scrollBtn" title="Go to top">↑</button>
+</div>
+
+</main>
+
+<footer>
+    <p>© 2025 AI X-ray Diagnosis Portal | All Rights Reserved.</p>
+    <p>Contact: support@xraydiagnosis.com</p>
+</footer>
+<script>
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth" 
+        });
+    }
+
+    function toggleFAQ(element) {
+    let parent = element.parentNode;
+    parent.classList.toggle("active");
+
+    // Change "+" to "-" when opened
+    let icon = element.querySelector(".faq-toggle");
+    if (icon.innerText === "+") {
+        icon.innerText = "−";
+    } else {
+        icon.innerText = "+";
+    }
+}
+</script>
+</body>
+</html>
